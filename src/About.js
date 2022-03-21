@@ -9,6 +9,8 @@ const About = () => {
         navigation within an app to get consistent behavior across web, mobile web, and installed
         PWA apps. 
       </p>
+
+      <h2>Cross-platform Back buttons</h2>
       <p>
         When making a PWA that can be installed on a mobile device, your application will not have
         Back/Forward buttons like you would with a browser and will not have a location/URL bar.
@@ -47,13 +49,35 @@ const About = () => {
       </p>
       <p>
         When deep-linking into a website, we don't <em>synthesize</em> elements on the stack. it
-        would be strange to click on a link to see a page then click Back on your browser only to
+        would be strange to click on a link to see a oage then click Back on your browser only to
         be taken to another page (or three) before you get back to where you were. We might provide
         an in-app navigation button that detects when our app is istalled as a PWA and detects
         whether there are previous views on our stack and, if not, show the root view instead of
         letting a user navigate out of our app. But this is a lot of work, so we are insetad going
         to assume you aren't going to deep-link a user in to a page on our site that has no means
         of navigating forward. 
+      </p>
+
+      <h2>URLs and back-links</h2>
+      <p>
+        Pretty much every web page has an address. However, views on native mobile devices generally don't.
+        Developers need to manually specify which views get an address so they can be "deep-linked"
+        from other applications, websites, and share pages.
+      </p>
+      <p>
+        With SPAs, the developer is again in a situation where they need to specify all their own
+        URLs. React apps commonly use react-router-dom to handle the mapping of routes to URLs and
+        update the location bar as a person navigates your site. 
+      </p>
+      <p>
+        This demo shows how a SPA developer can manage the location/URL in a consistent way across
+        an application. Most views have unique URLs. Navigating through the site updates the URL
+        as one would hope. Conditional views don't have their own URL as they ride on top of a view
+        that does. We use query parameters for add and edit modals <em>?mode=add</em> and
+        <em>?mode=edit</em>, respectively. We also use query paramters to specify which step you
+        are on in a multi-step flow, e.g., <em>?step=2</em>. Any of these URLs can be shared, and
+        pasting them into a browser (or being used as a deep-link for an installed PWA) should
+        work as intended.
       </p>
     </div>
   );
