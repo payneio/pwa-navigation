@@ -7,6 +7,14 @@ const Home = () => {
       <h1>Navigation demo</h1>
 
       <p>
+        See the code for this demo at <a
+          href="https://github.com/payneio/pwa-navigation" 
+          target="_blank"
+          rel="noreferrer">
+            https://github.com/payneio/pwa-navigation
+        </a>.
+      </p>
+      <p>
         Maintaining good back-state navigation is a discipline. This demo is intended to show some
         patterns for how to do that. The "Back" navigation button in the upper left and the
         browser's Back button word exactly the same. You can use either at any time and the views
