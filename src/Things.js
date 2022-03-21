@@ -6,7 +6,7 @@ import { thingsVar } from './cache';
 
 import { Link } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { PrimaryButton, List, Panel, Stack, TextField } from '@fluentui/react';
+import { PrimaryButton, List, Panel, Stack } from '@fluentui/react';
 
 export const GET_THINGS = gql`
   query GetThings {
@@ -21,8 +21,6 @@ const Things = () => {
   
   if (loading) return <h1>Loading...</h1>;
   if (error) return <p>ERROR: {error.message}</p>;
-
-  console.log('data', data);
 
   const onRenderCell = (item) => {
     return (

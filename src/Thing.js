@@ -7,7 +7,7 @@ import { thingsVar } from './cache';
 
 import { DefaultButton } from '@fluentui/react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { PrimaryButton, Panel, Stack, TextField } from '@fluentui/react';
+import { PrimaryButton, Panel, Stack } from '@fluentui/react';
 
 
 export const GET_THING = gql`
@@ -29,8 +29,6 @@ const Thing = () => {
   const { data, loading, error } = useQuery(GET_THING, { variables: { id } });
 
   const [showEdit, setShowEdit] = React.useState(false)
-  const [depth, setDepth] = React.useState(0)
-
 
   React.useEffect(() => {
     setShowEdit(params.get('mode') === 'edit')
