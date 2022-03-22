@@ -27,7 +27,6 @@ const Thing = () => {
 
   const { data, loading, error } = useQuery(GET_THING, { variables: { id } });
 
-  const [hasBackStack, setHasBackStack] = React.useState(true)
   const [showEdit, setShowEdit] = React.useState(false)
   const [showConfirm, setShowConfirm] = React.useState(false)
 
