@@ -4,7 +4,7 @@ import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 import { thingsVar } from './cache';
 
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { PrimaryButton, List, Panel, Stack } from '@fluentui/react';
 
@@ -24,8 +24,11 @@ const Things = () => {
 
   const onRenderCell = (item) => {
     return (
-      <div className="item" data-is-focusable={true}>
-        <h1>{item.name}</h1>
+      <div 
+        className="item"
+        data-is-focusable={true}
+      >
+        <h2 style={{marginBottom: 7}}>{item.name}</h2>
         <Link to={`/things/${item.id}`}>View</Link>
       </div>
     )
@@ -33,7 +36,7 @@ const Things = () => {
   
   return (<>
     <h1>Things</h1>
-    <Stack>
+    <Stack tokens={{childrenGap: '2rem'}}>
       <List items={data?.things} onRenderCell={onRenderCell} />
       <PrimaryButton onClick={() => setShowAdd(true)}>
         Add Thing
