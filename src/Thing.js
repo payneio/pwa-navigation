@@ -61,8 +61,27 @@ const Thing = () => {
   
   return (<>
     <h1>Thing</h1>
+
     <h2>{thing?.name}</h2>
-    
+
+    <p>
+      <em>
+        Here is a typical view of something. Go ahead and edit the thing.
+        Note how after you do so, if you hit the Back button (in menu or browser,
+        you are not taken back into the Edit panel, but instead are taken to wherever you came from,
+        which was probably the List view.
+      </em>
+    </p>
+    <p>
+      Same thing if you delete this item.
+    </p>
+    <p>
+      <em>
+        For the purposes of this demo, these modifications are only temporarily persisted. If you
+        refresh the site, they'll be reset to their original values.
+      </em>
+    </p>
+
     <Stack horizontal tokens={{childrenGap: 7}}>
       <PrimaryButton
         text="Edit"

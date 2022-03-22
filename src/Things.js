@@ -36,11 +36,20 @@ const Things = () => {
   
   return (<>
     <h1>Things</h1>
-    <Stack tokens={{childrenGap: '2rem'}}>
+    <Stack tokens={{childrenGap: '1rem'}}>
+      <p>
+        <em>
+          Here is a typical list of things like you will find on many views of an app. Go ahead and
+          add a new thing. Note how after you do so, if you hit the Back button (in menu or browser,
+          you are not taken back into the add panel, but instead are taken to wherever you came from.
+        </em>
+      </p>
       <List items={data?.things} onRenderCell={onRenderCell} />
-      <PrimaryButton onClick={() => setShowAdd(true)}>
-        Add Thing
-      </PrimaryButton>
+      <Stack horizontal tokens={{childrenGap: '1rem'}}>
+        <PrimaryButton onClick={() => setShowAdd(true)}>
+          Add Thing
+        </PrimaryButton>
+      </Stack>
     </Stack>
 
     <Panel

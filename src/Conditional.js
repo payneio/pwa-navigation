@@ -37,14 +37,14 @@ const Condition = ({setFirstTime}) => {
         This is a demonstration of how to handle conditional views simply.
       </p>
       <p>
-        This conditional view that is only shown until the condition is met.
-        This is done by setting a state variable.
+        This conditional view is shown only until the condition is met.
+        This is done (in this demo) by setting a state variable.
       </p>
       <p>
         The trick here is that there is no actual navigation. You don't want some other URL
         for the conditional view, because once the condition is met you will never want to see
-        it again. You don't want to have it in your navigation history separate from the base
-        view.
+        it again, or at least you won't until the condition is reset. You don't want to have it
+        in your navigation history separate from the base view.
       </p>
       <p>
         <em>
@@ -53,7 +53,7 @@ const Condition = ({setFirstTime}) => {
           conditional in Local Storage, Session Storage, Redux, or your API.
         </em>
       </p>
-      <PrimaryButton text="Complete" onClick={() => {
+      <PrimaryButton text="Satisfy condition" onClick={() => {
         setFirstTime(false)
       }} />
 
