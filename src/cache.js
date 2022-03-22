@@ -29,7 +29,6 @@ export const cache = new InMemoryCache({
                 const thing = thingsVar().find(thing => {
                     return thing.id === args.id
                 })
-                console.log(thing)
                 return thing
             }
         }
