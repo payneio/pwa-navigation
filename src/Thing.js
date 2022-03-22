@@ -38,6 +38,7 @@ const Thing = () => {
     // Either situation would be somewhat weird, and it simplifies the edge cases quite a bit.
     if (params.get('mode'))
       navigate({ replace: true })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   // Set our modals based on the URL query params.

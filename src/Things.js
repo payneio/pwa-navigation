@@ -4,7 +4,7 @@ import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 import { thingsVar } from './cache';
 
-import { Link, Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { PrimaryButton, List, Panel, Stack } from '@fluentui/react';
 
