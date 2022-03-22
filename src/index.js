@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
+// Initialize FluentUI icons
+import { initializeIcons } from '@fluentui/react/lib/Icons';
+initializeIcons();
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
